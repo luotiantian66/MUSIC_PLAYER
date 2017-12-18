@@ -249,7 +249,7 @@ function parseLyric(text){
 	}
 }
 
-text1 = getMusicWords('../words/1.lrc')
+text1 = getMusicWords('words/1.lrc')
 //text2 = getMusicWords('/words/2.lrc')
 //text3 = getMusicWords('/words/3.lrc')
 
