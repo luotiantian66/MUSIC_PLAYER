@@ -1,0 +1,155 @@
+
+.clearfix {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*board*/
+.board {
+	height: 100%;
+	width: 100%;
+}
+
+/*左侧播放部分*/
+.player {
+	float: left;
+	width: 350px;
+	height: 100%;
+	border-right: 3px solid #AAAAAA;
+
+}
+/*歌单部分*/
+.music-list {
+	height: 66%;
+	background-color: #FFEFD5;
+}
+.music-list h1{
+	text-align: center;
+}
+.list-song p {
+	padding: 10px;
+}
+.list-song p:nth-child(odd){
+	background-color: #FFDEAD;
+}
+
+/*播放部分*/
+.panel {
+	padding: 4%;
+	margin: 0 auto;
+	height: 34%;
+	background-color: #FFDEAD;
+}
+/*.font {
+	margin:0 auto;
+}
+*/
+.controls {
+	text-align: center;
+}
+.name, .font{
+	text-align: center;
+	margin: 20px 0;
+}
+.icon-play,.icon-loop, .icon-random {
+	padding: 10px;
+	display:none;
+
+}
+
+.icon-last, .icon-pause, .icon-next, .icon-inturn-copy {
+	padding: 10px;
+	
+}
+
+
+
+
+
+/*音量部分*/
+
+.controls .volume{
+	display: inline-block;
+	padding-bottom: 20px;
+}
+.controls .volbar {
+	display: inline-block;
+	border:1px solid grey;
+	width: 70px;
+	background-color: grey;
+}
+.controls .curvolbar {
+	border:1px solid #8B4513;
+	width: 70px;
+}
+
+/*时间轴部分*/
+.timebar  {
+	position: relative;
+	margin-bottom: 20px;
+	width:80%;
+	margin-left: 10%;
+
+}
+.timebar .totaltimebar {
+	width: 100%;
+	position: absolute;
+	border-top:3px solid grey;
+}
+.timebar .curtimebar {
+	position: absolute;
+	width: 0px;
+	border-top:3px solid #8B4513;
+}
+.timebar .timenum {
+	padding-top: 10px;
+	text-align: right;
+	font-size: 10px;
+}
+ 
+
+
+
+ /*右侧歌词部分*/
+.music-words {
+	
+	margin:0 auto;
+	text-align: center;
+	margin-left: 360px;
+	height: 100%;
+}
+.show {
+	/*position: relative;*/
+	height: 100%;
+	/*background:url("http://oya7y0n8c.bkt.clouddn.com/17-12-15/58622610.jpg") no-repeat;*/
+	background-size: cover;
+	/*z-index: -1;*/
+	/*filter: blur(15px)*/
+	opacity: 0.5;
+}
+
+.words {
+	/*float: left;*/
+	border: 10px solid black;
+	margin-top: -550px;
+	margin-left: 25%;
+	text-align: center;
+/*	position: absolute;	*/
+	height: 500px;
+	overflow:scroll;
+}
+.words p {
+	
+	padding: 5px;
+
+}
+img {
+	height: 100%;
+	width:100%;
+	background-color: rgba(255,255,255,0.35);
+	filter: blur(5px);
+	opacity: 0.5;
+	z-index: -1;
+}
+
