@@ -51,7 +51,7 @@ getMusicList(function(list){
 // 获取音乐数据
 function getMusicList(callback){
 	var xhr = new XMLHttpRequest()
-	xhr.open('GET','/music.json',true)
+	xhr.open('GET','/MUSIC_PLAYER/music.json',true)
 	xhr.onload = function(){
 		if((xhr.status >= 200 && xhr.status <= 300) || xhr.status ===304){
 			callback(JSON.parse(this.responseText))
@@ -249,7 +249,7 @@ function parseLyric(text){
 	}
 }
 
-text1 = getMusicWords('../words/1.lrc')
+text1 = getMusicWords('/MUSIC_PLAYER/words/1.lrc')
 //text2 = getMusicWords('/words/2.lrc')
 //text3 = getMusicWords('/words/3.lrc')
 
