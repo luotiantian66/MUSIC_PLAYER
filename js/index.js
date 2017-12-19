@@ -71,14 +71,10 @@ function getMusicList(callback){
 // 监听音乐事件，修改时长和进度条
 	
 audioObj.onplay = function(){
+	wordsUrl = "/words/" +  curIndex + ".lrc"
+	console.log(wordsUrl)
+	getMusicWords(wordsUrl)
 	$$('.list-song p')[curIndex].style.color = "#BB3D00"
-	// for(i=0;i<songNum;i++){
-	// 	if(i!==curIndex){
-	// 		$$('.list-song p')[i].style.color = "black"
-	// 	}else{
-	// 		$$('.list-song p')[i].style.color = "#BB3D00"
-	// 	}
-	// }
 	clock = setInterval(function(){
 	var totalmin = Math.floor(audioObj.duration/60)+''
 	var totalsec = Math.floor(audioObj.duration%60)+''
@@ -237,6 +233,7 @@ function getMusicWords(url){
 }
 
 function parseLyric(text){
+	$('.words').innerHTML = ''
 	text = text.split('\n')
 	var pattern = /\[\d{2}:\d{2}.d{2}\]/g
 	if(pattern.test(text[0]) == false){
@@ -249,9 +246,6 @@ function parseLyric(text){
 	}
 }
 
-text1 = getMusicWords('words/1.lrc')
-//text2 = getMusicWords('/words/2.lrc')
-//text3 = getMusicWords('/words/3.lrc')
 
 
 
