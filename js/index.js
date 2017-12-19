@@ -25,10 +25,7 @@ function loadMusic(music){
 			$$('.list-song p')[i].style.color = "#BB3D00"
 		}
 	}
-	// wordsUrl = "/words/" +  curIndex + ".lrc"
-	// console.log(wordsUrl)
-	// getMusicWords('wordsUrl')
-	//$('.show img').src = music.imgurl
+	
 	$('.name p').innerText = music.name + '---' + music.singer
 	if((audioObj.paused) == true ) {
 		$('.icon-play').style.display = "none"
@@ -71,7 +68,7 @@ function getMusicList(callback){
 // 监听音乐事件，修改时长和进度条
 	
 audioObj.onplay = function(){
-	wordsUrl = "/words/" +  curIndex + ".lrc"
+	wordsUrl = "words/" +  curIndex + ".lrc"
 	console.log(wordsUrl)
 	getMusicWords(wordsUrl)
 	$$('.list-song p')[curIndex].style.color = "#BB3D00"
